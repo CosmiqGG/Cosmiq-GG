@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Translations
+    url: https://github.com/CosmiqGG/Cosmiq-GG/blob/main/CONTRIBUTING.md#translations
+    about: Translations are submitted as pull requests, not issues. Read the guide here.
+  - name: Website
+    url: https://cosmiq.gg
+    about: Visit the Cosmiq website.
+  - name: Questions and help (Discord)
+    url: https://discord.gg/f9d5f5sqs6
+    about: Ask questions and get help in the Cosmiq Discord.

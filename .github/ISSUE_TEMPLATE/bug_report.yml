@@ -1,0 +1,105 @@
+name: Bug Report
+description: Report a bug or crash in Cosmiq
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## [Please read the guidelines before submitting](https://github.com/CosmiqGG/Cosmiq-GG/blob/main/CONTRIBUTING.md#bug-reports)
+
+        Thanks for reporting a bug. **Search [existing issues](https://github.com/CosmiqGG/Cosmiq-GG/issues?q=is%3Aissue) first** so you don't open a duplicate.
+
+        **Don't report security vulnerabilities, account problems or payment problems here.** Contact the Cosmiq team privately instead.
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Before you submit
+      options:
+        - label: I've read the guidelines and searched existing issues, and this bug hasn't been reported yet.
+          required: true
+        - label: I'm using the latest version of Cosmiq for my Minecraft version.
+          required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: The mod loader you're using.
+      options:
+        - Fabric
+        - NeoForge
+        - Forge
+    validations:
+      required: true
+  - type: input
+    id: mc-version
+    attributes:
+      label: Minecraft version
+      description: The version of Minecraft you're playing.
+      placeholder: e.g. 1.21.11 or 26.2
+    validations:
+      required: true
+  - type: input
+    id: platform-version
+    attributes:
+      label: Platform version
+      description: The version of Fabric Loader, NeoForge or Forge you're using. It's shown in your launcher's profile or installation settings.
+      placeholder: "e.g. Fabric Loader 0.17.2, NeoForge 21.1.200 or Forge 47.4.0"
+    validations:
+      required: true
+  - type: input
+    id: mod-version
+    attributes:
+      label: Cosmiq version
+      description: Find it in the Mods menu or in the file name of the Cosmiq jar.
+      placeholder: e.g. 0.3.7.5
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly. What did you expect to happen instead?
+      placeholder: When I open the emote wheel, my cosmetics disappear. I expected them to stay visible.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we make the bug happen? If you don't know, describe what you were doing when it happened.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: logs
+    attributes:
+      label: Logs and crash report
+      description: |
+        Upload `latest.log` from `.minecraft/logs` to [mclo.gs](https://mclo.gs) or a GitHub Gist, and paste the link here.
+        If the game crashed, also include the crash report from `.minecraft/crash-reports`.
+      placeholder: https://mclo.gs/...
+    validations:
+      required: true
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods
+      description: List the other mods you have installed, or write `None` if you only use Cosmiq and its required dependencies.
+      placeholder: Sodium 0.6.0, Iris 1.8.0, ...
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or videos
+      description: Optional. Drag files here, or paste links to screenshots or videos that show the bug.
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: Optional.
+      placeholder: e.g. Windows 11, macOS 15, Ubuntu 24.04
